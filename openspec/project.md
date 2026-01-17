@@ -53,5 +53,5 @@ ux 介面需要簡單易用，讓使用者可以快速查詢到所需的熱量�
 
 ## External Dependencies
 [Document key external services, APIs, or systems]
-- MUST 詢問 eqp parameter spec mcp[http://127.0.0.1:5001/mcp] api 端點的規格與範例
-- 測試時, 如果 [eqp-parameter-spec-api](http://127.0.0.1:5001) 沒有開啟, MUST 用新的shell視窗到目錄 eqp-parameter-spec-api 下執行 python3 app.py  
+- MUST 使用本地 MCP eqp parameter spec api[http://127.0.0.1:5001/mcp] 來知道 rest api 端點的規格與範例
+- 如果 [eqp-parameter-spec-api](http://127.0.0.1:5001) 沒有開啟, MUST 用新的shell視窗到目錄 eqp-parameter-spec-api 下執行 python3 app.py  
