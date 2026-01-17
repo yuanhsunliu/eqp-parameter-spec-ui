@@ -2,6 +2,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { ParameterSpecForm } from "@/components/forms/ParameterSpecForm";
 import { Button } from "@/components/ui/button";
 import { useState, useRef } from "react";
+import { TestApiConsumer } from "@/components/TestApiConsumer";
 
 function App() {
   const [showForm, setShowForm] = useState(false);
@@ -36,12 +37,21 @@ function App() {
   };
 
   const isFormPage = window.location.pathname === "/form";
+  const isTestPage = window.location.pathname === "/test";
 
   if (isFormPage) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50 p-2">
         <ParameterSpecForm />
         <Toaster position="top-center" richColors />
+      </div>
+    );
+  }
+
+  if (isTestPage) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
+        <TestApiConsumer />
       </div>
     );
   }
